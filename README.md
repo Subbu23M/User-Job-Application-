@@ -11,9 +11,6 @@
 
 ## **DEMO**
 
-![Screenshot 2021-11-17 at 14-24-10 React-Redux Project](https://user-images.githubusercontent.com/57181459/142170188-f4871612-5528-4455-b67b-2f60f92f6723.png
-)
-
 ![Screenshot 2021-11-17 at 14-25-07 React-Redux Project](https://user-images.githubusercontent.com/57181459/142170216-8cd441f8-70b4-44a7-a8a5-9d8d4525a649.png)
 
 ![Screenshot 2021-11-17 at 14-29-30 React-Redux Project](https://user-images.githubusercontent.com/57181459/142170228-9af7cce3-1cca-4961-9413-18281f944abe.png)
