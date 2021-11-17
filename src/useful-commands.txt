@@ -1,0 +1,11 @@
+Useful npm commands for this application
+
+1)npm install validator
+
+2)npm install axios
+
+3)npm install react-router-dom@5.2.0
+
+4)npm install node-sass
+
+5)npm install react-bootstrap
