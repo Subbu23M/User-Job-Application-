@@ -4,7 +4,7 @@ import {Modal} from 'react-bootstrap';
 
 import axios from 'axios';
 
-// Es6-Arrow function
+// ES6-Arrow function
 const Table = (props) => {
     // Object Destructuring - ES6
     const{tableData} = props;
