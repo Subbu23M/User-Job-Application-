@@ -4,7 +4,8 @@ import NavBar from './NavBar';
 
 import '../Styling/Main.scss';
 
-function App(props) {
+// Arrow function - ES6
+const App = (props) => {
     
     return (
         <>
