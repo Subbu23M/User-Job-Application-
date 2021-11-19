@@ -6,7 +6,8 @@ import Dashboard from './Dashboard';
 
 import Loader from '../Loader';
 
-function JobContainer(props) {
+// ES6-Arrow function
+const JobContainer = (props) => {
 
     // State variable & function to store user information from job application form
     const[data,setData] = useState([]);
@@ -23,7 +24,7 @@ function JobContainer(props) {
         axios
             .get(baseUrl)
 
-            .then(function(response){
+            .then((response) => {
                 const result = response.data;
 
                 if(Object.keys(result).includes('errors')){
@@ -37,7 +38,7 @@ function JobContainer(props) {
                 }
             })
 
-            .catch(function(error){
+            .catch((error) => {
                 alert(error.message);
             })
     }
