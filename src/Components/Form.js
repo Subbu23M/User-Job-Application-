@@ -2,72 +2,73 @@ import React,{useState} from 'react';
 
 import validator from 'validator';
 
-function Form(props) {
+// ES6-Arrow function
+const Form = (props) => {
 
     const{submitData} = props;
 
-    // State variable & function to make form as controlled inputs
+    // State variable & function to make form as controlled input
     const[name,setName] = useState('');
 
     // Event Handler as callback function - 1
-    const handleName = function(e){
+    const handleName = (e) => {
         const inputValue = e.target.value;
 
         // Invoke state function
         setName(inputValue);
     }
 
-    // State variable & function to make form as controlled inputs
+    // State variable & function to make form as controlled input
     const[email,setEmail] = useState('');
     
     // Event Handler as callback function - 2 
-    const handleEmail = function(e){
+    const handleEmail = (e) => {
         const inputValue = e.target.value;
         
         // Invoke State function
         setEmail(inputValue);
     }
     
-    // State variable & function to make form as controlled inputs
+    // State variable & function to make form as controlled input
     const[phone,setNumber] = useState('');
     
     // Event Handler as callback function - 3 
-    const handleNumber = function(e){
+    const handleNumber = (e) => {
         const inputValue = e.target.value;
         
         // Invoke state function
         setNumber(inputValue);
     }
     
-    // State variable & function to make form as controlled inputs
+    // State variable & function to make form as controlled input
     const[jobTitle,setJobRole] = useState('');
     
     const jobRoles = ['Front-End Developer','Node.js Developer','MEAN Stack Developer','FULL Stack Developer'];
     
     // Event Handler as callback function - 4  
-    const handleJobRole = function(e){
+    const handleJobRole = (e) => {
         const inputValue = e.target.value;
         
         // Invoke state function
         setJobRole(inputValue);
     }
     
-    // State variable & function to make form as controlled inputs
+    // State variable & function to make form as controlled input
     const[experience,setExp] = useState('');
     
     // Event Handler as callback function - 5   
-    const handleExp = function(e){
+    const handleExp = (e) => {
         const inputValue = e.target.value;
         
         // Invoke state function
         setExp(inputValue);
     }
     
-    // State variable & function to make form as controlled inputs
+    // State variable & function to make form as controlled input
     const[skills,setSkills] = useState('');
     
     // Event Handler as callback function - 6   
-    const handleSkills = function(e){
+    const handleSkills = (e) => {
         const inputValue = e.target.value;
 
         // Invoke State function
@@ -81,7 +82,7 @@ function Form(props) {
     // console.log(findErrors);
 
     // Form Validation
-    const runValidation = function(){
+    const runValidation = () => {
         // For name
         if(name.trim().length === 0){
             // Object operations
@@ -131,17 +132,17 @@ function Form(props) {
 
         if(Object.keys(findErrors).length === 0){
             // Invoke the state function
-            setFormErrors({})
+            setFormErrors({});
 
-            // User Inputs
+            // User Inputs ES6-Concise Property
             const formData = {
-                name: name,
-                email: email,
-                phone: phone,
-                skills:skills,
-                jobTitle: jobTitle,
-                experience: experience
-            };
+                name,
+                email,
+                phone,
+                skills,
+                jobTitle,
+                experience
+            }
 
             // Invoke function
             submitData(formData);
@@ -279,7 +280,7 @@ function Form(props) {
                                         </option>
 
                                         {
-                                            jobRoles.sort().map(function(job,index){
+                                            jobRoles.sort().map((job,index) => {
                                                 return <option value={job} key={index}>
                                                     {job}
                                                 </option>
