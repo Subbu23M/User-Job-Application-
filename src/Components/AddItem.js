@@ -4,7 +4,8 @@ import axios from 'axios';
 
 import Form from './Form';
 
-function AddItem(props) {
+// ES6-Arrow function
+const AddItem = (props) => {
 
     const baseUrl = 'http://dct-application-form.herokuapp.com/users/application-form';
 
@@ -15,7 +16,7 @@ function AddItem(props) {
         axios
                 .post(baseUrl,profile)
 
-                .then(function(response){
+                .then((response) => {
                     const result = response.data;
                     // console.log(result);
 
@@ -26,7 +27,7 @@ function AddItem(props) {
                     }
                 })
 
-                .catch(function(error){
+                .catch((error) => {
                     alert(error.message);
                 })
     }
