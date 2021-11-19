@@ -47,7 +47,7 @@ const Table = (props) => {
 
     return (
         <>
-            {/* Simple...if Conditional-Statement  */}
+//             {/* Simple...if Conditional-Statement  */}
             {
                 (tableData.length > 0) &&
             
