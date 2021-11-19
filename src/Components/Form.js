@@ -123,7 +123,7 @@ const Form = (props) => {
     }
 
     // Send Application
-    const handleSubmit = function(e){
+    const handleSubmit = (e) => {
         // To stop browser to refresh
         e.preventDefault();
 
