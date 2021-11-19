@@ -4,7 +4,8 @@ import {Modal} from 'react-bootstrap';
 
 import axios from 'axios';
 
-function Table(props) {
+// Es6-Arrow function
+const Table = (props) => {
     // Object Destructuring - ES6
     const{tableData} = props;
 
@@ -15,13 +16,13 @@ function Table(props) {
     const [show, setShow] = useState(false);
 
     // Event Handler as callback function to toggle
-    const handleClose = function(){
+    const handleClose = () => {
         // Invoke State function
         setShow(false);
     }
 
     // Event Handler as callback function
-    const handleView = function(_id){
+    const handleView = (_id) => {
         
         const baseUrl = `http://dct-application-form.herokuapp.com/users/application-form/${_id}`;
 
@@ -29,7 +30,7 @@ function Table(props) {
         axios
             .get(baseUrl)
 
-            .then(function(response){
+            .then((response) => {
                 const result = response.data;
 
                 // Invoke State function
@@ -39,14 +40,14 @@ function Table(props) {
                 setShow(true);
             })
 
-            .catch(function(error){
+            .catch((error) => {
                 alert(error.message);
             })
     }
 
     return (
         <>
-
+            {/* Simple...if Conditional-Statement  */}
             {
                 (tableData.length > 0) &&
             
@@ -84,7 +85,7 @@ function Table(props) {
 
                     <tbody>
                         {
-                            tableData.map(function(person){
+                            tableData.map((person) => {
                                 // console.log(person);
 
                                 // Object Destructuting - ES6
@@ -113,7 +114,7 @@ function Table(props) {
                                             <button 
                                                 className='btn btn-primary btn-sm text-light' 
                                                 onClick={
-                                                            function(e){
+                                                            (e) => {
                                                                 handleView(_id)
                                                             }
                                                         }
