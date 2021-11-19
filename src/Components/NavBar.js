@@ -8,7 +8,8 @@ import AddItem from './AddItem';
 
 import JobContainer from './JobContainer';
 
-function NavBar(props) {
+// ES6-Arrow function
+const NavBar = (props) => {
 
     return (
         <>
