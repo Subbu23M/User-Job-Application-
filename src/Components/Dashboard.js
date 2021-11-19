@@ -2,7 +2,8 @@ import React,{useState} from 'react';
 
 import JobRoles from './JobRoles';
 
-function Dashboard(props) {
+// ES6-Arrow function
+const Dashboard = (props) => {
 
     // Object Destructuring - ES6
     const{data} = props;
@@ -11,35 +12,35 @@ function Dashboard(props) {
     const[job,setJob] = useState([]);
 
     // 1)
-    const filterFrontEnd = data.filter(function(ele){
+    const filterFrontEnd = data.filter((ele) => {
         if(ele.jobTitle === 'Front-End Developer'){
             return true;
         }
     }) 
     
     // 2)
-    const filterNodeJsDeveloper = data.filter(function(ele){
+    const filterNodeJsDeveloper = data.filter((ele) => {
         if(ele.jobTitle === 'Node.js Developer'){
             return true;
         }
     }) 
     
     // 3)
-    const filterMeanStack = data.filter(function(ele){
+    const filterMeanStack = data.filter((ele) => {
         if(ele.jobTitle === 'MEAN Stack Developer'){
             return true;
         }
     }) 
     
     // 4)
-    const filterFullStack = data.filter(function(ele){
+    const filterFullStack = data.filter((ele) => {
         if(ele.jobTitle === 'FULL Stack Developer'){
             return true;
         }
     }) 
     
     // Event Handler as callback function
-    const handleJob = function(e){
+    const handleJob = (e) => {
         // Target Value
         const target = e.target.value;
 
