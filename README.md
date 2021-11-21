@@ -36,7 +36,7 @@
 
     * Applicant Details are displayed in Table format.
 
-    * Employer can mark the candidates as accepted or rejected after review.
+    * Employer can click View Details button to view employee details.
 
 **Contributor**
 
